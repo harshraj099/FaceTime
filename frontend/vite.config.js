@@ -16,4 +16,14 @@ export default defineConfig({
       '/api': 'http://localhost:8080',
     },
   },
+  test: {
+    environment: 'jsdom',
+    environmentOptions: { jsdom: { url: 'http://localhost:3000' } },
+    setupFiles: './src/test/setup.js',
+    env: {
+      VITE_STREAM_API_KEY: 'test-stream-key',
+      VITE_BASE_URL: 'http://localhost:3000',
+      VITE_API_URL: '',
+    },
+  },
 });

@@ -3,6 +3,7 @@
 .vscode/
 .env
 .env*.local
+.claude
 
 # frontend
 frontend/node_modules
